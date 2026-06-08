@@ -1,0 +1,39 @@
+site_name: Rando Manager — Documentation
+site_url: https://korbier.github.io/rando-manager-docs/
+
+theme:
+  name: material
+  language: fr
+  palette:
+    scheme: slate          # dark mode par défaut
+    primary: green
+    accent: light green
+  features:
+    - navigation.sections
+    - navigation.indexes
+    - search.highlight
+
+plugins:
+  - search
+
+nav:
+  - Accueil: index.md
+  - Conception:
+    - conception/index.md
+    - Modèle de données: conception/modele-donnees.md
+    - Stockage & Synchronisation: conception/stockage-synchronisation.md
+    - Mode public: conception/mode-public.md
+    - Stack technique: conception/stack-technique.md
+  - Infrastructure:
+    - infrastructure/index.md
+    - Provisioning Ansible: infrastructure/provisioning-ansible.md
+    - Services: infrastructure/services.md
+    - TLS & Let's Encrypt: infrastructure/tls-lets-encrypt.md
+  - CI/CD:
+    - cicd/index.md
+    - Branches & Workflows: cicd/branches-workflows.md
+    - Versioning & Artifacts: cicd/versioning-artifacts.md
+  - Roadmap:
+    - roadmap/index.md
+    - Visualisation 3D: roadmap/visualisation-3d.md
+    - Fonctionnalités futures: roadmap/fonctionnalites-futures.md
