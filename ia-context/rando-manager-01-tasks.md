@@ -25,7 +25,7 @@
     - [X] 1.4.1 Rôle `common`
     - [X] 1.4.2 Rôle `java`
     - [X] 1.4.3 Rôle `postgresql`
-    - [ ] 1.4.4 Rôle `quarkus`
+    - [X] 1.4.4 Rôle `quarkus`
     - [ ] 1.4.5 Rôle `nginx`
     - [ ] 1.4.6 Rôle `certbot`
 - [ ] 1.5 Déploiement Alpha + Prod sur le Pi
