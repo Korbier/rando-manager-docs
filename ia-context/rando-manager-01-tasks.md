@@ -6,11 +6,11 @@
 
 ## 0. Création des repos GitHub
 
-- [X] 0.1 `rando-manager-docs` (privé) — documentation
+- [X] 0.1 `rando-manager-docs` (public) — documentation
 - [X] 0.2 `rando-manager-infra` (privé) — provisioning Ansible
-- [ ] 0.3 `rando-manager-back` (privé) — backend Quarkus
-- [ ] 0.4 `rando-manager-web` (privé) — frontend Angular bureau
-- [ ] 0.5 `rando-manager-mobile` (privé) — frontend Angular PWA mobile
+- [X] 0.3 `rando-manager-back` (privé) — backend Quarkus
+- [X] 0.4 `rando-manager-web` (privé) — frontend Angular bureau
+- [X] 0.5 `rando-manager-mobile` (privé) — frontend Angular PWA mobile
 
 ---
 
@@ -21,16 +21,15 @@
 - [X] 1.3 Conception du provisioning Ansible
     - [X] 1.3.1 Définition des rôles
     - [X] 1.3.2 Conception des templates et variables
-- [ ] 1.4 Réalisation du playbook Ansible
+- [X] 1.4 Réalisation du playbook Ansible
     - [X] 1.4.1 Rôle `common`
     - [X] 1.4.2 Rôle `java`
     - [X] 1.4.3 Rôle `postgresql`
     - [X] 1.4.4 Rôle `quarkus`
-    - [ ] 1.4.5 Rôle `nginx`
-    - [ ] 1.4.6 Rôle `certbot`
+    - [X] 1.4.5 Rôle `nginx`
 - [ ] 1.5 Déploiement Alpha + Prod sur le Pi
-    - [ ] 1.5.1 Déclenchement du workflow Ansible
-    - [ ] 1.5.2 Vérification de l'environnement
+    - [X] 1.5.1 Déclenchement du workflow Ansible
+    - [X] 1.5.2 Vérification de l'environnement => script verify.yml
 
 ---
 

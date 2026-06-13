@@ -426,3 +426,62 @@ jobs:
 ## 11. Stratégie de déploiement du repo Ansible
 
 Aucun déploiement automatique au push — le provisioning reste un acte intentionnel.
+
+## 12 - Séquence de validation de l'installation
+
+Une fois le workflow terminé, vérifier depuis ton poste Windows via SSH (Tailscale) :
+
+### Services systemd
+
+Exécuter :
+
+```bash
+systemctl status postgresql
+systemctl status nginx
+# Les services Quarkus ne doivent PAS être démarrés
+systemctl status rando-alpha
+systemctl status rando-prod
+```
+
+### PostgreSQL
+
+Vérifier les bases et les utilisateurs :
+
+```bash
+sudo -u postgres psql -c "\l"         # lister les bases
+sudo -u postgres psql -c "\du"        # lister les utilisateurs
+```
+
+### Répertoires
+
+Contrôler les répertoires créés par le provisioning :
+
+```bash
+ls -la /opt/rando-manager/
+ls -la /opt/rando-manager/alpha/config/
+ls -la /opt/rando-manager/prod/config/
+ls -la /var/www/
+```
+
+### Nginx
+
+Tester la configuration et vérifier les vhosts :
+
+```bash
+nginx -t
+ls -la /etc/nginx/sites-enabled/
+curl -I http://alpha.tondomaine.fr      # doit rediriger vers HTTPS
+curl -I https://alpha.tondomaine.fr     # doit répondre 200
+curl -I https://tondomaine.fr           # doit répondre 200
+```
+
+### Déposer les clés JWT — opération manuelle (hors périmètre Ansible)
+
+Copier la clé privée JWT dans les répertoires `config` de chaque environment puis ajuster les droits :
+
+```bash
+sudo cp jwt-private.pem /opt/rando-manager/alpha/config/
+sudo cp jwt-private.pem /opt/rando-manager/prod/config/
+sudo chown rando-user:rando-user /opt/rando-manager/alpha/config/jwt-private.pem
+sudo chown rando-user:rando-user /opt/rando-manager/prod/config/jwt-private.pem
+```
