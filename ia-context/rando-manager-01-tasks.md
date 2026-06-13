@@ -35,14 +35,14 @@
 
 ## 2. Création du repo back : `rando-manager-back`
 
-- [ ] 2.1 Structure du projet Quarkus
-- [ ] 2.2 Mise en place Flyway
-- [ ] 2.3 Environnement de dev local
-    - [ ] 2.3.1 Configuration PostgreSQL local
-    - [ ] 2.3.2 Bouchon R2 (profil dev Quarkus)
-- [ ] 2.4 Prototype : endpoint `GET /api/info` (version + commit + environnement)
+- [X] 2.1 Structure du projet Quarkus
+- [X] 2.2 Mise en place Flyway
+- [X] 2.3 Environnement de dev local
+    - [X] 2.3.1 Configuration PostgreSQL local
+    - [X] 2.3.2 Bouchon R2 (profil dev Quarkus)
+- [X] 2.4 Prototype : endpoint `GET /api/info` (version + commit + environnement)
 - [ ] 2.5 Publication du contrat OpenAPI sur GitHub Packages
-- [ ] 2.6 Mise en place de la CI/CD
+- [X] 2.6 Mise en place de la CI/CD
 
 ---
 
